@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18090208680"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'AW-18090208680');
+</script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Bathroom Remodeling Estimate | GetEstimateFast</title>
@@ -1040,5 +1049,16 @@ Preferred Contact Method: ${document.getElementById('contactMethod').value.trim(
 
     showStep(0);
   </script>
+  <script>
+  const bathroomForm = document.getElementById('bathroomForm');
+
+  if (bathroomForm) {
+    bathroomForm.addEventListener('submit', function () {
+      gtag('event', 'conversion', {
+        'send_to': 'AW-18090208680/XRtTCKj-mpwcEKjbirJD'
+      });
+    });
+  }
+</script>
 </body>
 </html>
