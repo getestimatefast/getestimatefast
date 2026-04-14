@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bathroom Remodeling Estimate</title>
+
+<style>
+body { font-family: Arial; margin:0; background:#f5f5f5; }
+.container { max-width:800px; margin:auto; padding:20px; }
+
+.step { display:none; }
+.step.active { display:block; }
+
+h2 { margin-bottom:15px; }
+
+button {
+  padding:12px;
+  margin:8px 0;
+  width:100%;
+  border:none;
+  background:#111;
+  color:white;
+  border-radius:8px;
+  cursor:pointer;
+}
+
+button.selected {
+  background:green;
+}
+
+.nav {
+  display:flex;
+  justify-content:space-between;
+  margin-top:20px;
+}
+
+input, select {
+  width:100%;
+  padding:10px;
+  margin-top:10px;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Bathroom Remodeling Estimate</h1>
+<p>Request your estimate within 24 hours</p>
+
+<form action="https://formsubmit.co/getestimatefast@gmail.com" method="POST" enctype="multipart/form-data">
+
+<input type="hidden" name="_subject" value="New Bathroom Remodeling Lead">
+<input type="hidden" name="_captcha" value="false">
+
+<!-- STEP 1 -->
+<div class="step active">
+<h2>What type of project?</h2>
+
+<button type="button" onclick="select(this,'project','Full remodel')">Full remodel</button>
+<button type="button" onclick="select(this,'project','Shower only')">Shower only</button>
+<button type="button" onclick="select(this,'project','Tub only')">Tub only</button>
+
+<div class="nav">
+<button type="button" onclick="next()">Next</button>
+</div>
+</div>
+
+<!-- STEP 2 -->
+<div class="step">
+<h2>Scope of work</h2>
+
+<label><input type="checkbox" name="scope[]" value="Demolition"> Demolition</label>
+<label><input type="checkbox" name="scope[]" value="Plumbing"> Plumbing</label>
+<label><input type="checkbox" name="scope[]" value="Tile"> Tile</label>
+
+<div class="nav">
+<button type="button" onclick="prev()">Back</button>
+<button type="button" onclick="next()">Next</button>
+</div>
+</div>
+
+<!-- STEP 3 -->
+<div class="step">
+<h2>Timeline</h2>
+
+<select name="timeline">
+<option>ASAP</option>
+<option>30 days</option>
+<option>60 days</option>
+</select>
+
+<div class="nav">
+<button type="button" onclick="prev()">Back</button>
+<button type="button" onclick="next()">Next</button>
+</div>
+</div>
+
+<!-- STEP 4 -->
+<div class="step">
+<h2>Location</h2>
+
+<input name="city" placeholder="City">
+<input name="zip" placeholder="ZIP Code">
+
+<div class="nav">
+<button type="button" onclick="prev()">Back</button>
+<button type="button" onclick="next()">Next</button>
+</div>
+</div>
+
+<!-- STEP 5 -->
+<div class="step">
+<h2>Photos (optional)</h2>
+
+<input type="file" name="photos[]" multiple>
+
+<div class="nav">
+<button type="button" onclick="prev()">Back</button>
+<button type="button" onclick="next()">Next</button>
+</div>
+</div>
+
+<!-- STEP 6 -->
+<div class="step">
+<h2>Contact</h2>
+
+<input name="name" placeholder="Full Name" required>
+<input name="phone" placeholder="Phone" required>
+<input name="email" placeholder="Email" required>
+
+<div class="nav">
+<button type="button" onclick="prev()">Back</button>
+<button type="submit">Submit</button>
+</div>
+</div>
+
+</form>
+
+</div>
+
+<script>
+
+let step = 0;
+const steps = document.querySelectorAll(".step");
+
+function showStep() {
+  steps.forEach((s,i)=> s.classList.toggle("active", i===step));
+}
+
+function next() { step++; showStep(); }
+function prev() { step--; showStep(); }
+
+function select(btn,name,value){
+  document.querySelectorAll("button").forEach(b=>b.classList.remove("selected"));
+  btn.classList.add("selected");
+
+  let input = document.querySelector(`input[name=${name}]`);
+  if(!input){
+    input = document.createElement("input");
+    input.type="hidden";
+    input.name=name;
+    document.querySelector("form").appendChild(input);
+  }
+  input.value=value;
+}
+
+</script>
+
+</body>
+</html>
