@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>GetEstimateFast</title>
+  <title>GetEstimateFast | Bathroom Remodeling Estimates</title>
+  <meta name="description" content="Request a professional bathroom remodeling estimate within 24 hours in Riverview and surrounding areas." />
   <style>
     * {
       box-sizing: border-box;
@@ -12,378 +13,476 @@
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background: #f3f3f3;
-      color: #111;
+      background: #f3f4f6;
+      color: #111827;
     }
 
     .container {
-      max-width: 1100px;
+      max-width: 1120px;
       margin: 0 auto;
-      padding: 32px 20px 60px;
+      padding: 0 20px;
     }
 
-    h1 {
-      font-size: 48px;
-      line-height: 1.05;
-      margin: 0 0 16px;
+    .header {
+      background: #ffffff;
+      border-bottom: 1px solid #e5e7eb;
+      position: sticky;
+      top: 0;
+      z-index: 50;
     }
 
-    h2 {
-      font-size: 28px;
-      margin: 0 0 20px;
+    .header-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      padding: 18px 0;
     }
 
-    p {
-      font-size: 18px;
-      line-height: 1.6;
-      margin: 0 0 16px;
+    .brand {
+      font-size: 24px;
+      font-weight: 800;
+      color: #111827;
+      text-decoration: none;
     }
 
-    .card {
-      background: #fff;
-      border-radius: 18px;
-      padding: 28px;
-      margin-top: 26px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.04);
-    }
-
-    .hero-badge {
+    .header-btn {
       display: inline-block;
-      background: #e7f7eb;
+      background: #111827;
+      color: white;
+      text-decoration: none;
+      padding: 13px 18px;
+      border-radius: 12px;
+      font-weight: 700;
+      font-size: 15px;
+    }
+
+    .hero {
+      padding: 54px 0 28px;
+    }
+
+    .hero-card {
+      background: linear-gradient(135deg, #ffffff 0%, #f9fafb 100%);
+      border-radius: 24px;
+      padding: 34px;
+      box-shadow: 0 12px 40px rgba(0,0,0,0.05);
+    }
+
+    .badge {
+      display: inline-block;
+      background: #e8f7ec;
       color: #18794e;
       font-size: 13px;
-      font-weight: bold;
+      font-weight: 800;
       padding: 8px 12px;
       border-radius: 999px;
       margin-bottom: 16px;
     }
 
-    .service-grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 14px;
+    h1 {
+      margin: 0 0 16px;
+      font-size: 50px;
+      line-height: 1.05;
+      letter-spacing: -0.02em;
     }
 
-    .service-btn,
-    .submit-btn,
-    .jump-btn {
-      width: 100%;
-      border: none;
-      border-radius: 12px;
-      padding: 18px 16px;
+    .hero-text {
+      max-width: 800px;
       font-size: 20px;
-      cursor: pointer;
+      line-height: 1.7;
+      color: #4b5563;
+      margin: 0 0 26px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-bottom: 30px;
+    }
+
+    .primary-btn,
+    .secondary-btn,
+    .cta-btn,
+    .wa-float {
+      text-decoration: none;
+      font-weight: 800;
+      border-radius: 14px;
       transition: 0.2s ease;
     }
 
-    .service-btn {
-      background: #0b0b0b;
-      color: #fff;
-      text-align: center;
+    .primary-btn {
+      background: #111827;
+      color: white;
+      padding: 16px 22px;
+      display: inline-block;
     }
 
-    .service-btn:hover {
-      opacity: 0.92;
+    .secondary-btn {
+      background: white;
+      color: #111827;
+      border: 1px solid #d1d5db;
+      padding: 16px 22px;
+      display: inline-block;
     }
 
-    .service-btn.active {
-      background: #1f7a4d;
-      color: #fff;
-      box-shadow: 0 0 0 3px rgba(31,122,77,0.18);
+    .primary-btn:hover,
+    .secondary-btn:hover,
+    .cta-btn:hover,
+    .header-btn:hover,
+    .wa-float:hover {
+      opacity: 0.94;
     }
 
-    .jump-btn,
-    .submit-btn {
-      background: #0b0b0b;
-      color: #fff;
-    }
-
-    .jump-btn:hover,
-    .submit-btn:hover {
-      opacity: 0.92;
-    }
-
-    .helper-row {
+    .info-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 14px;
-      margin-top: 22px;
+      gap: 16px;
+      margin-top: 8px;
     }
 
-    .helper-box {
-      background: #fff;
-      border-radius: 14px;
+    .info-card {
+      background: white;
+      border: 1px solid #e5e7eb;
+      border-radius: 18px;
       padding: 18px;
-      border: 1px solid #ececec;
     }
 
-    .helper-box strong {
+    .info-card strong {
       display: block;
-      margin-bottom: 6px;
+      margin-bottom: 8px;
       font-size: 16px;
     }
 
-    .helper-box span {
-      font-size: 14px;
-      color: #555;
-      line-height: 1.5;
-    }
-
-    form {
-      display: grid;
-      gap: 14px;
-    }
-
-    input,
-    select,
-    textarea {
-      width: 100%;
-      padding: 15px 16px;
-      border-radius: 10px;
-      border: 1px solid #cfcfcf;
-      font-size: 17px;
-      background: #fff;
-    }
-
-    textarea {
-      min-height: 120px;
-      resize: vertical;
-    }
-
-    .small-text {
-      font-size: 14px;
-      color: #444;
+    .info-card span {
+      font-size: 15px;
       line-height: 1.6;
+      color: #6b7280;
+    }
+
+    .section {
+      padding: 28px 0;
+    }
+
+    .section-card {
+      background: white;
+      border-radius: 24px;
+      padding: 30px;
+      box-shadow: 0 10px 32px rgba(0,0,0,0.04);
+    }
+
+    h2 {
+      margin: 0 0 12px;
+      font-size: 34px;
+      line-height: 1.15;
+    }
+
+    .section-text {
+      margin: 0;
+      font-size: 18px;
+      line-height: 1.7;
+      color: #4b5563;
+    }
+
+    .steps-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-top: 24px;
+    }
+
+    .step-card {
+      background: #f9fafb;
+      border: 1px solid #e5e7eb;
+      border-radius: 18px;
+      padding: 22px;
+    }
+
+    .step-number {
+      width: 38px;
+      height: 38px;
+      border-radius: 999px;
+      background: #111827;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      margin-bottom: 14px;
+      font-size: 15px;
+    }
+
+    .step-card strong {
+      display: block;
+      margin-bottom: 8px;
+      font-size: 17px;
+    }
+
+    .step-card span {
+      font-size: 15px;
+      line-height: 1.6;
+      color: #6b7280;
+    }
+
+    .feature-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 18px;
+      margin-top: 18px;
+    }
+
+    .feature-box,
+    .visit-box,
+    .cta-box {
+      border-radius: 22px;
+      padding: 26px;
+    }
+
+    .feature-box {
+      background: #ffffff;
+      border: 1px solid #e5e7eb;
+    }
+
+    .visit-box {
+      background: #fff8e7;
+      border: 1px solid #f3d27a;
+      color: #5c4500;
+    }
+
+    .feature-box p,
+    .visit-box p,
+    .cta-box p {
+      margin: 0;
+      font-size: 17px;
+      line-height: 1.7;
+    }
+
+    .cta-section {
+      padding: 18px 0 46px;
+    }
+
+    .cta-box {
+      background: #111827;
+      color: white;
+      text-align: center;
+      box-shadow: 0 12px 40px rgba(17,24,39,0.18);
+    }
+
+    .cta-box h2 {
+      margin-bottom: 14px;
+      color: white;
+    }
+
+    .cta-box p {
+      max-width: 760px;
+      margin: 0 auto 22px;
+      color: #d1d5db;
+    }
+
+    .cta-btn {
+      display: inline-block;
+      background: white;
+      color: #111827;
+      padding: 16px 22px;
     }
 
     .disclaimer {
-      margin-top: 26px;
+      margin-top: 20px;
       font-size: 13px;
-      color: #666;
-      line-height: 1.6;
+      line-height: 1.7;
+      color: #d1d5db;
     }
 
-    .selected-service {
-      margin-top: 12px;
-      font-size: 15px;
-      color: #1f7a4d;
-      font-weight: bold;
+    .footer {
+      padding: 24px 0 40px;
+      color: #6b7280;
+      font-size: 14px;
+      text-align: center;
     }
 
-    .top-actions {
-      display: flex;
-      gap: 12px;
-      margin-top: 22px;
-      flex-wrap: wrap;
-    }
-
-    .top-link {
-      display: inline-block;
-      padding: 14px 18px;
-      border-radius: 12px;
-      text-decoration: none;
-      font-weight: bold;
-      border: 1px solid #ddd;
-      color: #111;
-      background: #fff;
-    }
-
-    .whatsapp-float {
+    .wa-float {
       position: fixed;
       right: 18px;
       bottom: 18px;
       background: #25d366;
       color: white;
-      text-decoration: none;
       padding: 14px 18px;
-      border-radius: 999px;
-      font-weight: bold;
-      box-shadow: 0 6px 18px rgba(0,0,0,0.16);
-      z-index: 1000;
+      display: inline-block;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.18);
+      z-index: 80;
     }
 
-    @media (max-width: 768px) {
+    @media (max-width: 900px) {
       h1 {
-        font-size: 36px;
+        font-size: 40px;
+      }
+
+      .info-grid,
+      .steps-grid,
+      .feature-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .hero-card,
+      .section-card,
+      .cta-box {
+        padding: 22px;
+      }
+
+      .header-inner {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      h1 {
+        font-size: 34px;
       }
 
       h2 {
-        font-size: 24px;
+        font-size: 28px;
       }
 
-      .helper-row {
-        grid-template-columns: 1fr;
+      .hero-text,
+      .section-text,
+      .feature-box p,
+      .visit-box p,
+      .cta-box p {
+        font-size: 17px;
       }
 
-      .service-btn,
-      .submit-btn,
-      .jump-btn {
-        font-size: 18px;
+      .hero-actions {
+        flex-direction: column;
+      }
+
+      .primary-btn,
+      .secondary-btn,
+      .header-btn,
+      .cta-btn {
+        width: 100%;
+        text-align: center;
       }
     }
   </style>
 </head>
 <body>
-  <a
-    class="whatsapp-float"
-    href="https://wa.me/18135917560?text=Hello,%20I%20would%20like%20to%20request%20an%20estimate."
-    target="_blank"
-  >
+  <a class="wa-float" href="https://wa.me/18135917560?text=Hello,%20I%20would%20like%20to%20request%20a%20bathroom%20remodeling%20estimate." target="_blank">
     WhatsApp
   </a>
 
-  <div class="container">
-    <div class="hero-badge">Serving Riverview and surrounding areas within 60 miles</div>
-
-    <h1>Get a professional estimate for your project within 24 hours.</h1>
-    <p>
-      Select the service you need, submit your request, and get connected with a local construction professional.
-    </p>
-
-    <div class="top-actions">
-      <a class="top-link" href="#estimate-form">Request Your Estimate</a>
-      <a class="top-link" href="mailto:getestimatefast@gmail.com">Email Us</a>
-    </div>
-
-    <div class="helper-row">
-      <div class="helper-box">
-        <strong>Fast response</strong>
-        <span>Estimate requests are reviewed within 24 hours.</span>
-      </div>
-      <div class="helper-box">
-        <strong>Local service</strong>
-        <span>Focused on Riverview and nearby service areas.</span>
-      </div>
-      <div class="helper-box">
-        <strong>Clear process</strong>
-        <span>Simple request form with organized project details.</span>
+  <header class="header">
+    <div class="container">
+      <div class="header-inner">
+        <a href="index.html" class="brand">GetEstimateFast</a>
+        <a href="bathroom-remodeling.html" class="header-btn">Request Estimate</a>
       </div>
     </div>
+  </header>
 
-    <div class="card">
-      <h2>Select your project</h2>
-      <div class="service-grid">
-        <button class="service-btn" type="button" onclick="selectService('Bathroom Remodeling')">Bathroom Remodeling</button>
-        <button class="service-btn" type="button" onclick="selectService('Kitchen Remodeling')">Kitchen Remodeling</button>
-        <button class="service-btn" type="button" onclick="selectService('Painting')">Painting</button>
-        <button class="service-btn" type="button" onclick="selectService('Drywall')">Drywall</button>
-        <button class="service-btn" type="button" onclick="selectService('Flooring')">Flooring</button>
-        <button class="service-btn" type="button" onclick="selectService('Tile Installation')">Tile Installation</button>
-        <button class="service-btn" type="button" onclick="selectService('General Repairs')">General Repairs</button>
-      </div>
+  <main>
+    <section class="hero">
+      <div class="container">
+        <div class="hero-card">
+          <div class="badge">Bathroom Remodeling • Riverview Area</div>
+          <h1>Request a professional bathroom remodeling estimate within 24 hours</h1>
+          <p class="hero-text">
+            Tell us about your bathroom project through a simple step-by-step form. Get your request reviewed faster with organized project details.
+          </p>
 
-      <div id="selectedServiceText" class="selected-service">
-        Selected service: Bathroom Remodeling
-      </div>
+          <div class="hero-actions">
+            <a class="primary-btn" href="bathroom-remodeling.html">Start Your Bathroom Estimate</a>
+            <a class="secondary-btn" href="#how-it-works">How It Works</a>
+          </div>
 
-      <div style="margin-top:18px;">
-        <button class="jump-btn" type="button" onclick="goToForm()">Continue to Request Form</button>
+          <div class="info-grid">
+            <div class="info-card">
+              <strong>Fast response</strong>
+              <span>Estimate requests are reviewed within 24 hours.</span>
+            </div>
+            <div class="info-card">
+              <strong>Simple process</strong>
+              <span>Answer a few questions and submit your bathroom project details online.</span>
+            </div>
+            <div class="info-card">
+              <strong>Local service area</strong>
+              <span>Serving Riverview and surrounding areas within 60 miles.</span>
+            </div>
+          </div>
+        </div>
       </div>
+    </section>
+
+    <section class="section" id="how-it-works">
+      <div class="container">
+        <div class="section-card">
+          <h2>How it works</h2>
+          <p class="section-text">
+            Our estimate request form is designed to make the bathroom remodeling process easier before the first review.
+          </p>
+
+          <div class="steps-grid">
+            <div class="step-card">
+              <div class="step-number">1</div>
+              <strong>Tell us about your project</strong>
+              <span>Answer a few quick questions about your bathroom remodel, scope of work, materials, and timeline.</span>
+            </div>
+            <div class="step-card">
+              <div class="step-number">2</div>
+              <strong>Add photos if available</strong>
+              <span>Photos are optional, but they help us review your bathroom project more accurately.</span>
+            </div>
+            <div class="step-card">
+              <div class="step-number">3</div>
+              <strong>Receive your estimate</strong>
+              <span>We review your request and respond within 24 hours.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="feature-grid">
+          <div class="feature-box">
+            <h2>Planning a bathroom remodel?</h2>
+            <p>
+              Whether you need a full bathroom remodel, a shower update, a tub-to-shower conversion, or help defining the project scope, our guided request form helps organize everything before the estimate review.
+            </p>
+          </div>
+
+          <div class="visit-box">
+            <h2>Need an in-person evaluation?</h2>
+            <p>
+              Some bathroom remodeling projects may require a site visit. If needed, a $100 service fee may apply and will be credited toward your project if you move forward with the team.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-section">
+      <div class="container">
+        <div class="cta-box">
+          <h2>Ready to request your bathroom remodeling estimate?</h2>
+          <p>
+            Start with a clear, organized request so your project can be reviewed faster and with better detail.
+          </p>
+          <a class="cta-btn" href="bathroom-remodeling.html">Request Your Bathroom Estimate</a>
+
+          <div class="disclaimer">
+            GetEstimateFast is a lead generation platform that connects customers with construction professionals. Depending on the project, services may be performed by our team or by independent contractors.
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      GetEstimateFast • Riverview, FL service area • getestimatefast@gmail.com
     </div>
-
-    <div class="card" id="estimate-form">
-      <h2>Request Your Estimate</h2>
-
-      <form onsubmit="sendToWhatsApp(event)">
-        <input type="hidden" id="service" value="Bathroom Remodeling" />
-
-        <input id="name" type="text" placeholder="Full Name" required />
-        <input id="phone" type="text" placeholder="Phone Number" required />
-        <input id="email" type="email" placeholder="Email Address" required />
-        <input id="zip" type="text" placeholder="ZIP Code" required />
-
-        <select id="timeline" required>
-          <option value="">When would you like to start?</option>
-          <option>As soon as possible</option>
-          <option>Within 30 days</option>
-          <option>Within 60 days</option>
-          <option>Within 90 days</option>
-          <option>Just planning for now</option>
-        </select>
-
-        <select id="contactMethod" required>
-          <option value="">Preferred contact method</option>
-          <option>Phone Call</option>
-          <option>Text Message</option>
-          <option>WhatsApp</option>
-          <option>Email</option>
-        </select>
-
-        <select id="visit" required>
-          <option value="">Do you need an in-person visit?</option>
-          <option>No</option>
-          <option>Yes - I may need an on-site evaluation</option>
-        </select>
-
-        <textarea id="details" placeholder="Project details (optional)"></textarea>
-
-        <button class="submit-btn" type="submit">Submit Request</button>
-      </form>
-
-      <p class="small-text" style="margin-top:16px;">
-        In-person evaluations are available for a $100 service fee. This fee will be credited toward your project if you move forward with the team.
-      </p>
-
-      <p class="disclaimer">
-        GetEstimateFast is a lead generation platform that connects customers with construction professionals. Depending on the project, services may be performed by our team or by independent contractors.
-      </p>
-    </div>
-  </div>
-
-  <script>
-    let selectedService = "Bathroom Remodeling";
-
-    function selectService(serviceName) {
-      selectedService = serviceName;
-      document.getElementById("service").value = serviceName;
-      document.getElementById("selectedServiceText").textContent = "Selected service: " + serviceName;
-
-      const buttons = document.querySelectorAll(".service-btn");
-      buttons.forEach((btn) => {
-        if (btn.textContent.trim() === serviceName) {
-          btn.classList.add("active");
-        } else {
-          btn.classList.remove("active");
-        }
-      });
-    }
-
-    function goToForm() {
-      document.getElementById("estimate-form").scrollIntoView({ behavior: "smooth" });
-    }
-
-    function sendToWhatsApp(event) {
-      event.preventDefault();
-
-      const name = document.getElementById("name").value.trim();
-      const phone = document.getElementById("phone").value.trim();
-      const email = document.getElementById("email").value.trim();
-      const zip = document.getElementById("zip").value.trim();
-      const timeline = document.getElementById("timeline").value;
-      const contactMethod = document.getElementById("contactMethod").value;
-      const visit = document.getElementById("visit").value;
-      const details = document.getElementById("details").value.trim();
-      const service = document.getElementById("service").value;
-
-      const message =
-`New estimate request
-Service: ${service}
-Name: ${name}
-Phone: ${phone}
-Email: ${email}
-ZIP Code: ${zip}
-Timeline: ${timeline}
-Preferred Contact: ${contactMethod}
-In-Person Visit: ${visit}
-Details: ${details || "N/A"}`;
-
-      const whatsappUrl = "https://wa.me/18135917560?text=" + encodeURIComponent(message);
-      window.open(whatsappUrl, "_blank");
-    }
-
-    window.onload = function () {
-      selectService("Bathroom Remodeling");
-    };
-  </script>
+  </footer>
 </body>
 </html>
