@@ -6,24 +6,28 @@
   <title>Bathroom Remodeling Estimate | GetEstimateFast</title>
   <style>
     * { box-sizing: border-box; }
+
     body {
       margin: 0;
       font-family: Arial, sans-serif;
       background: #f3f4f6;
       color: #111827;
     }
+
     .container {
       max-width: 900px;
       margin: 0 auto;
-      padding: 28px 18px 60px;
+      padding: 22px 18px 60px;
     }
+
     .hero {
       background: #ffffff;
       border-radius: 20px;
-      padding: 28px;
+      padding: 24px;
       box-shadow: 0 8px 30px rgba(0,0,0,0.05);
-      margin-bottom: 20px;
+      margin-bottom: 18px;
     }
+
     .badge {
       display: inline-block;
       background: #e8f7ec;
@@ -32,36 +36,46 @@
       font-weight: 700;
       padding: 8px 12px;
       border-radius: 999px;
-      margin-bottom: 14px;
+      margin-bottom: 12px;
     }
+
     h1 {
-      font-size: 40px;
+      font-size: 38px;
       line-height: 1.08;
-      margin: 0 0 14px;
+      margin: 0 0 10px;
     }
+
     .sub {
-      font-size: 18px;
+      font-size: 17px;
       color: #4b5563;
-      margin: 0;
       line-height: 1.6;
+      margin: 0;
     }
+
+    .mobile-hide {
+      display: block;
+    }
+
     .info-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 14px;
-      margin-top: 22px;
+      margin-top: 20px;
     }
+
     .info-card {
       background: #f9fafb;
       border: 1px solid #e5e7eb;
       border-radius: 16px;
       padding: 16px;
     }
+
     .info-card strong {
       display: block;
       margin-bottom: 6px;
       font-size: 15px;
     }
+
     .info-card span {
       font-size: 14px;
       color: #6b7280;
@@ -71,31 +85,35 @@
     .form-shell {
       background: #ffffff;
       border-radius: 20px;
-      padding: 26px;
+      padding: 24px;
       box-shadow: 0 8px 30px rgba(0,0,0,0.05);
     }
 
     .progress-wrap {
       margin-bottom: 22px;
     }
+
     .progress-top {
       display: flex;
       justify-content: space-between;
       align-items: center;
+      gap: 12px;
       margin-bottom: 8px;
       font-size: 14px;
       color: #4b5563;
       font-weight: 700;
     }
+
     .progress-bar {
       height: 10px;
       background: #e5e7eb;
       border-radius: 999px;
       overflow: hidden;
     }
+
     .progress-fill {
       height: 100%;
-      width: 10%;
+      width: 8%;
       background: #111827;
       transition: width 0.25s ease;
     }
@@ -103,6 +121,7 @@
     .step {
       display: none;
     }
+
     .step.active {
       display: block;
     }
@@ -112,26 +131,29 @@
       margin: 0 0 10px;
       line-height: 1.15;
     }
+
     .step-desc {
       color: #6b7280;
       font-size: 16px;
       line-height: 1.6;
-      margin: 0 0 22px;
+      margin: 0 0 20px;
     }
 
     .option-grid {
       display: grid;
       gap: 12px;
     }
+
     .option-btn,
     .nav-btn,
     .submit-btn,
-    .wa-btn {
+    .contact-link {
       border: none;
       border-radius: 14px;
       cursor: pointer;
       transition: 0.2s ease;
       font-size: 17px;
+      text-decoration: none;
     }
 
     .option-btn {
@@ -139,12 +161,17 @@
       padding: 18px 16px;
       text-align: left;
       background: #111827;
-      color: white;
+      color: #fff;
       font-weight: 600;
     }
-    .option-btn:hover {
+
+    .option-btn:hover,
+    .nav-btn:hover,
+    .submit-btn:hover,
+    .contact-link:hover {
       opacity: 0.95;
     }
+
     .option-btn.selected {
       background: #18794e;
     }
@@ -153,6 +180,7 @@
       display: grid;
       gap: 12px;
     }
+
     .checkbox-item {
       display: flex;
       align-items: center;
@@ -164,17 +192,24 @@
       font-size: 16px;
       cursor: pointer;
     }
+
     .checkbox-item input {
       width: 18px;
       height: 18px;
+      flex: 0 0 auto;
     }
 
     .field-grid {
       display: grid;
       gap: 14px;
     }
+
     .two-col {
       grid-template-columns: 1fr 1fr;
+    }
+
+    .three-col {
+      grid-template-columns: 1fr 1fr 1fr;
     }
 
     input, select, textarea {
@@ -185,17 +220,20 @@
       font-size: 16px;
       background: white;
     }
+
     textarea {
-      min-height: 110px;
+      min-height: 140px;
       resize: vertical;
     }
+
     .hint {
       font-size: 14px;
       color: #6b7280;
       line-height: 1.6;
       margin-top: 10px;
     }
-    .visit-box {
+
+    .notice-box {
       background: #fff8e7;
       border: 1px solid #f3d27a;
       padding: 16px;
@@ -206,12 +244,21 @@
       margin-bottom: 18px;
     }
 
+    .soft-box {
+      background: #f9fafb;
+      border: 1px solid #e5e7eb;
+      padding: 16px;
+      border-radius: 14px;
+      margin-top: 14px;
+    }
+
     .nav-row {
       display: flex;
       gap: 12px;
       justify-content: space-between;
       margin-top: 24px;
     }
+
     .nav-btn,
     .submit-btn {
       padding: 16px 18px;
@@ -220,6 +267,7 @@
       color: #fff;
       font-weight: 700;
     }
+
     .nav-btn.secondary {
       background: #e5e7eb;
       color: #111827;
@@ -233,24 +281,47 @@
       display: grid;
       gap: 12px;
     }
+
     .summary-item {
       border-bottom: 1px solid #e5e7eb;
       padding-bottom: 10px;
     }
+
     .summary-item:last-child {
       border-bottom: none;
       padding-bottom: 0;
     }
+
     .summary-item strong {
       display: block;
       margin-bottom: 4px;
       font-size: 14px;
       color: #374151;
     }
+
     .summary-item span {
       font-size: 15px;
       color: #111827;
       line-height: 1.5;
+    }
+
+    .contact-links {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 16px;
+    }
+
+    .contact-link {
+      display: inline-block;
+      background: #111827;
+      color: white;
+      padding: 13px 16px;
+      font-weight: 700;
+    }
+
+    .contact-link.alt {
+      background: #25d366;
     }
 
     .footer-note {
@@ -260,19 +331,6 @@
       line-height: 1.7;
     }
 
-    .wa-box {
-      margin-top: 14px;
-    }
-    .wa-btn {
-      display: inline-block;
-      text-decoration: none;
-      background: #25d366;
-      color: white;
-      padding: 14px 18px;
-      font-weight: 700;
-      border-radius: 999px;
-    }
-
     .error {
       color: #b91c1c;
       font-size: 14px;
@@ -280,36 +338,51 @@
       display: none;
     }
 
+    .hidden {
+      display: none !important;
+    }
+
     @media (max-width: 768px) {
-      h1 { font-size: 32px; }
-      h2 { font-size: 25px; }
-      .info-grid, .two-col { grid-template-columns: 1fr; }
+      .mobile-hide {
+        display: none;
+      }
+
+      h1 { font-size: 30px; }
+      h2 { font-size: 24px; }
+
       .form-shell, .hero { padding: 20px; }
+      .two-col, .three-col, .info-grid { grid-template-columns: 1fr; }
       .nav-row { flex-direction: column; }
+
+      .container {
+        padding-top: 12px;
+      }
     }
   </style>
 </head>
 <body>
   <div class="container">
     <div class="hero">
-      <div class="badge">Serving Riverview and surrounding areas within 60 miles</div>
+      <div class="badge">Bathroom Remodeling • Riverview Area</div>
       <h1>Bathroom Remodeling Estimate</h1>
       <p class="sub">
-        Answer a few quick questions and request a professional bathroom remodeling estimate within 24 hours.
+        Answer a few quick questions to request your bathroom remodeling estimate.
       </p>
 
-      <div class="info-grid">
-        <div class="info-card">
-          <strong>Fast response</strong>
-          <span>Estimate requests are reviewed within 24 hours.</span>
-        </div>
-        <div class="info-card">
-          <strong>Organized process</strong>
-          <span>Simple step-by-step project details for faster review.</span>
-        </div>
-        <div class="info-card">
-          <strong>Local service area</strong>
-          <span>Focused on Riverview and nearby communities.</span>
+      <div class="mobile-hide">
+        <div class="info-grid">
+          <div class="info-card">
+            <strong>Fast response</strong>
+            <span>Estimates within 24 hours are available when enough project details are provided.</span>
+          </div>
+          <div class="info-card">
+            <strong>Simple process</strong>
+            <span>Submit organized project details through a guided step-by-step form.</span>
+          </div>
+          <div class="info-card">
+            <strong>Local service area</strong>
+            <span>Serving Riverview and surrounding areas within 60 miles.</span>
+          </div>
         </div>
       </div>
     </div>
@@ -317,7 +390,7 @@
     <div class="form-shell">
       <div class="progress-wrap">
         <div class="progress-top">
-          <span id="stepLabel">Step 1 of 10</span>
+          <span id="stepLabel">Step 1 of 12</span>
           <span id="stepTitleMini">Project Type</span>
         </div>
         <div class="progress-bar">
@@ -332,6 +405,9 @@
         <input type="hidden" name="Service" value="Bathroom Remodeling" />
         <input type="hidden" name="Project Type" id="projectTypeInput" />
         <input type="hidden" name="Materials" id="materialsInput" />
+        <input type="hidden" name="Knows Measurements" id="knowsMeasurementsInput" />
+        <input type="hidden" name="Measurement Method" id="measurementMethodInput" />
+        <input type="hidden" name="Standard Bathroom Size" id="standardSizeInput" />
         <input type="hidden" name="Project Details" id="projectDetailsInput" />
         <input type="hidden" name="Timeline" id="timelineInput" />
         <input type="hidden" name="On-Site Evaluation" id="visitInput" />
@@ -412,15 +488,67 @@
         </section>
 
         <!-- STEP 4 -->
+        <section class="step" data-title="Measurements">
+          <h2>Do you know your bathroom measurements?</h2>
+          <p class="step-desc">This helps us determine whether an estimate can be reviewed more accurately within 24 hours.</p>
+
+          <div class="option-grid" data-group="knowsMeasurements">
+            <button type="button" class="option-btn" data-value="Yes, I know the measurements">Yes, I know the measurements</button>
+            <button type="button" class="option-btn" data-value="No, I do not know the measurements">No, I do not know the measurements</button>
+          </div>
+
+          <div id="measurementNoBox" class="notice-box hidden">
+            Accurate estimates may require bathroom measurements. If measurements are not available, an on-site evaluation may be needed and the 24-hour estimate may not apply.
+          </div>
+
+          <div id="measurementYesBox" class="hidden">
+            <div class="soft-box">
+              <p class="step-desc" style="margin-bottom:14px;">How would you like to provide the bathroom size?</p>
+
+              <div class="option-grid" data-group="measurementMethod">
+                <button type="button" class="option-btn" data-value="Select a standard bathroom size">Select a standard bathroom size</button>
+                <button type="button" class="option-btn" data-value="Enter custom measurements">Enter custom measurements</button>
+              </div>
+
+              <div id="standardSizeBox" class="hidden" style="margin-top:16px;">
+                <select id="standardBathroomSize">
+                  <option value="">Select a standard bathroom size</option>
+                  <option>Small bathroom — around 5' x 8'</option>
+                  <option>Standard bathroom — around 6' x 8'</option>
+                  <option>Master bathroom — around 8' x 10'</option>
+                  <option>Large master bathroom — around 10' x 12'</option>
+                  <option>Different size / not listed</option>
+                </select>
+              </div>
+
+              <div id="customSizeBox" class="hidden" style="margin-top:16px;">
+                <div class="field-grid three-col">
+                  <input type="text" id="bathLength" name="Bathroom Length (feet)" placeholder="Length (feet)" />
+                  <input type="text" id="bathWidth" name="Bathroom Width (feet)" placeholder="Width (feet)" />
+                  <input type="text" id="bathHeight" name="Ceiling Height (feet)" placeholder="Ceiling height (feet)" />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="error">Please complete the measurement step to continue.</div>
+
+          <div class="nav-row">
+            <button type="button" class="nav-btn secondary" onclick="prevStep()">Back</button>
+            <button type="button" class="nav-btn" onclick="nextStep()">Next</button>
+          </div>
+        </section>
+
+        <!-- STEP 5 -->
         <section class="step" data-title="Project Details">
-          <h2>What project details do you already have?</h2>
-          <p class="step-desc">This helps us understand whether the scope is already defined.</p>
+          <h2>What details do you already have?</h2>
+          <p class="step-desc">Select the option that best describes your project status.</p>
 
           <div class="option-grid" data-group="projectDetails">
-            <button type="button" class="option-btn" data-value="I know the measurements">I know the measurements</button>
-            <button type="button" class="option-btn" data-value="I do not know the measurements">I do not know the measurements</button>
             <button type="button" class="option-btn" data-value="I already have a design">I already have a design</button>
             <button type="button" class="option-btn" data-value="I need help planning the layout">I need help planning the layout</button>
+            <button type="button" class="option-btn" data-value="I know the finishes I want">I know the finishes I want</button>
+            <button type="button" class="option-btn" data-value="I am still deciding on finishes">I am still deciding on finishes</button>
           </div>
 
           <div class="error">Please select one option to continue.</div>
@@ -431,7 +559,31 @@
           </div>
         </section>
 
-        <!-- STEP 5 -->
+        <!-- STEP 6 -->
+        <section class="step" data-title="Project Description">
+          <h2>Tell us more about your project</h2>
+          <p class="step-desc">The more details you provide, the more accurate your estimate will be.</p>
+
+          <textarea id="projectDescription" name="Project Description" placeholder="Describe what you want to change or improve in your bathroom.
+
+Example:
+- Replace bathtub with walk-in shower
+- Install new tile and waterproofing
+- Move plumbing
+- Upgrade vanity and lighting
+- Fix previous water damage"></textarea>
+
+          <div class="hint">You can include any specific ideas, materials, or problems you are experiencing.</div>
+
+          <div class="error">Please add a short project description to continue.</div>
+
+          <div class="nav-row">
+            <button type="button" class="nav-btn secondary" onclick="prevStep()">Back</button>
+            <button type="button" class="nav-btn" onclick="nextStep()">Next</button>
+          </div>
+        </section>
+
+        <!-- STEP 7 -->
         <section class="step" data-title="Timeline">
           <h2>When would you like to start?</h2>
           <p class="step-desc">Choose the timeline that best fits your project plan.</p>
@@ -452,7 +604,7 @@
           </div>
         </section>
 
-        <!-- STEP 6 -->
+        <!-- STEP 8 -->
         <section class="step" data-title="Location">
           <h2>Where is the project located?</h2>
           <p class="step-desc">Please provide the city and ZIP code of the property.</p>
@@ -470,11 +622,11 @@
           </div>
         </section>
 
-        <!-- STEP 7 -->
+        <!-- STEP 9 -->
         <section class="step" data-title="On-Site Evaluation">
           <h2>Do you think an on-site evaluation may be needed?</h2>
 
-          <div class="visit-box">
+          <div class="notice-box">
             Some projects may require an in-person evaluation. If a site visit is needed, a $100 service fee may apply. This fee will be credited toward your project if you move forward with the team.
           </div>
 
@@ -491,13 +643,15 @@
           </div>
         </section>
 
-        <!-- STEP 8 -->
+        <!-- STEP 10 -->
         <section class="step" data-title="Photos">
           <h2>Would you like to add photos of the project area?</h2>
           <p class="step-desc">Photos are optional, but they help us review your bathroom project more accurately.</p>
 
           <input type="file" name="Project Photos" multiple accept="image/*" />
-          <div class="hint">You can upload up to 5 photos from your phone or computer.</div>
+          <div class="hint">
+            Additional project photos can also be shared later using your preferred contact method.
+          </div>
 
           <div class="nav-row">
             <button type="button" class="nav-btn secondary" onclick="prevStep()">Back</button>
@@ -505,8 +659,8 @@
           </div>
         </section>
 
-        <!-- STEP 9 -->
-        <section class="step" data-title="Contact">
+        <!-- STEP 11 -->
+        <section class="step" data-title="Contact Information">
           <h2>How can we reach you?</h2>
           <p class="step-desc">Please enter your contact information so we can follow up on your request.</p>
 
@@ -521,7 +675,6 @@
               <option>WhatsApp</option>
               <option>Email</option>
             </select>
-            <textarea id="notes" name="Additional Notes" placeholder="Additional notes (optional)"></textarea>
           </div>
 
           <div class="error">Please complete name, phone, email, and preferred contact method.</div>
@@ -532,15 +685,17 @@
           </div>
         </section>
 
-        <!-- STEP 10 -->
+        <!-- STEP 12 -->
         <section class="step" data-title="Review & Submit">
           <h2>Review your request</h2>
           <p class="step-desc">Please review your project details before submitting.</p>
 
           <div class="summary" id="summaryBox"></div>
 
-          <div class="wa-box">
-            <a class="wa-btn" id="whatsAppBackup" href="#" target="_blank">Send by WhatsApp instead</a>
+          <div class="contact-links">
+            <a class="contact-link" id="smsBackup" href="#">Send by text instead</a>
+            <a class="contact-link" id="emailBackup" href="#">Send by email instead</a>
+            <a class="contact-link alt" id="whatsAppBackup" href="#" target="_blank">Send by WhatsApp instead</a>
           </div>
 
           <div class="footer-note">
@@ -567,6 +722,9 @@
     const singleChoiceState = {
       projectType: '',
       materials: '',
+      knowsMeasurements: '',
+      measurementMethod: '',
+      standardSize: '',
       projectDetails: '',
       timeline: '',
       visit: ''
@@ -582,6 +740,14 @@
 
           if (groupName === 'projectType') document.getElementById('projectTypeInput').value = btn.dataset.value;
           if (groupName === 'materials') document.getElementById('materialsInput').value = btn.dataset.value;
+          if (groupName === 'knowsMeasurements') {
+            document.getElementById('knowsMeasurementsInput').value = btn.dataset.value;
+            handleMeasurementKnowledge();
+          }
+          if (groupName === 'measurementMethod') {
+            document.getElementById('measurementMethodInput').value = btn.dataset.value;
+            handleMeasurementMethod();
+          }
           if (groupName === 'projectDetails') document.getElementById('projectDetailsInput').value = btn.dataset.value;
           if (groupName === 'timeline') document.getElementById('timelineInput').value = btn.dataset.value;
           if (groupName === 'visit') document.getElementById('visitInput').value = btn.dataset.value;
@@ -590,6 +756,61 @@
         });
       });
     });
+
+    document.getElementById('standardBathroomSize').addEventListener('change', function() {
+      singleChoiceState.standardSize = this.value;
+      document.getElementById('standardSizeInput').value = this.value;
+      hideError(currentStep);
+    });
+
+    function handleMeasurementKnowledge() {
+      const yesBox = document.getElementById('measurementYesBox');
+      const noBox = document.getElementById('measurementNoBox');
+
+      if (singleChoiceState.knowsMeasurements === 'Yes, I know the measurements') {
+        yesBox.classList.remove('hidden');
+        noBox.classList.add('hidden');
+      } else if (singleChoiceState.knowsMeasurements === 'No, I do not know the measurements') {
+        yesBox.classList.add('hidden');
+        noBox.classList.remove('hidden');
+        singleChoiceState.measurementMethod = '';
+        singleChoiceState.standardSize = '';
+        document.getElementById('measurementMethodInput').value = '';
+        document.getElementById('standardSizeInput').value = '';
+        clearMeasurementMethodSelections();
+        document.getElementById('standardBathroomSize').value = '';
+        document.getElementById('bathLength').value = '';
+        document.getElementById('bathWidth').value = '';
+        document.getElementById('bathHeight').value = '';
+      } else {
+        yesBox.classList.add('hidden');
+        noBox.classList.add('hidden');
+      }
+    }
+
+    function clearMeasurementMethodSelections() {
+      document.querySelectorAll('[data-group="measurementMethod"] .option-btn').forEach(btn => {
+        btn.classList.remove('selected');
+      });
+      document.getElementById('standardSizeBox').classList.add('hidden');
+      document.getElementById('customSizeBox').classList.add('hidden');
+    }
+
+    function handleMeasurementMethod() {
+      const standardBox = document.getElementById('standardSizeBox');
+      const customBox = document.getElementById('customSizeBox');
+
+      if (singleChoiceState.measurementMethod === 'Select a standard bathroom size') {
+        standardBox.classList.remove('hidden');
+        customBox.classList.add('hidden');
+      } else if (singleChoiceState.measurementMethod === 'Enter custom measurements') {
+        standardBox.classList.add('hidden');
+        customBox.classList.remove('hidden');
+      } else {
+        standardBox.classList.add('hidden');
+        customBox.classList.add('hidden');
+      }
+    }
 
     function showStep(index) {
       steps.forEach((step, i) => step.classList.toggle('active', i === index));
@@ -602,7 +823,7 @@
 
       if (index === steps.length - 1) {
         buildSummary();
-        buildWhatsAppLink();
+        buildBackupLinks();
       }
     }
 
@@ -644,17 +865,57 @@
         return false;
       }
 
-      if (index === 3 && !singleChoiceState.projectDetails) {
-        showError(index, 'Please select one option to continue.');
-        return false;
+      if (index === 3) {
+        if (!singleChoiceState.knowsMeasurements) {
+          showError(index, 'Please select whether you know the measurements.');
+          return false;
+        }
+
+        if (singleChoiceState.knowsMeasurements === 'Yes, I know the measurements') {
+          if (!singleChoiceState.measurementMethod) {
+            showError(index, 'Please choose how you want to provide the bathroom size.');
+            return false;
+          }
+
+          if (singleChoiceState.measurementMethod === 'Select a standard bathroom size') {
+            const standard = document.getElementById('standardBathroomSize').value.trim();
+            if (!standard) {
+              showError(index, 'Please select a standard bathroom size.');
+              return false;
+            }
+          }
+
+          if (singleChoiceState.measurementMethod === 'Enter custom measurements') {
+            const length = document.getElementById('bathLength').value.trim();
+            const width = document.getElementById('bathWidth').value.trim();
+            const height = document.getElementById('bathHeight').value.trim();
+            if (!length || !width || !height) {
+              showError(index, 'Please enter length, width, and ceiling height.');
+              return false;
+            }
+          }
+        }
       }
 
-      if (index === 4 && !singleChoiceState.timeline) {
+      if (index === 4 && !singleChoiceState.projectDetails) {
         showError(index, 'Please select one option to continue.');
         return false;
       }
 
       if (index === 5) {
+        const desc = document.getElementById('projectDescription').value.trim();
+        if (desc.length < 10) {
+          showError(index, 'Please add a short project description to continue.');
+          return false;
+        }
+      }
+
+      if (index === 6 && !singleChoiceState.timeline) {
+        showError(index, 'Please select one option to continue.');
+        return false;
+      }
+
+      if (index === 7) {
         const city = document.getElementById('city').value.trim();
         const zip = document.getElementById('zip').value.trim();
         if (!city || !zip) {
@@ -663,12 +924,12 @@
         }
       }
 
-      if (index === 6 && !singleChoiceState.visit) {
+      if (index === 8 && !singleChoiceState.visit) {
         showError(index, 'Please select one option to continue.');
         return false;
       }
 
-      if (index === 8) {
+      if (index === 10) {
         const name = document.getElementById('fullName').value.trim();
         const phone = document.getElementById('phone').value.trim();
         const email = document.getElementById('email').value.trim();
@@ -697,6 +958,26 @@
       return Array.from(document.querySelectorAll('input[name="Scope of Work[]"]:checked')).map(i => i.value);
     }
 
+    function getMeasurementSummary() {
+      if (singleChoiceState.knowsMeasurements === 'No, I do not know the measurements') {
+        return 'Does not know measurements';
+      }
+
+      if (singleChoiceState.knowsMeasurements === 'Yes, I know the measurements') {
+        if (singleChoiceState.measurementMethod === 'Select a standard bathroom size') {
+          return `Knows measurements • Standard size: ${document.getElementById('standardBathroomSize').value || 'N/A'}`;
+        }
+
+        if (singleChoiceState.measurementMethod === 'Enter custom measurements') {
+          return `Knows measurements • Custom size: ${document.getElementById('bathLength').value || 'N/A'} ft x ${document.getElementById('bathWidth').value || 'N/A'} ft x ${document.getElementById('bathHeight').value || 'N/A'} ft`;
+        }
+
+        return 'Knows measurements';
+      }
+
+      return '—';
+    }
+
     function buildSummary() {
       const summaryBox = document.getElementById('summaryBox');
       const scope = getScopeValues();
@@ -705,7 +986,9 @@
         ['Project Type', singleChoiceState.projectType || '—'],
         ['Scope of Work', scope.length ? scope.join(', ') : '—'],
         ['Materials', singleChoiceState.materials || '—'],
+        ['Measurements', getMeasurementSummary()],
         ['Project Details', singleChoiceState.projectDetails || '—'],
+        ['Project Description', document.getElementById('projectDescription').value.trim() || '—'],
         ['Timeline', singleChoiceState.timeline || '—'],
         ['City', document.getElementById('city').value.trim() || '—'],
         ['ZIP Code', document.getElementById('zip').value.trim() || '—'],
@@ -713,8 +996,7 @@
         ['Full Name', document.getElementById('fullName').value.trim() || '—'],
         ['Phone Number', document.getElementById('phone').value.trim() || '—'],
         ['Email Address', document.getElementById('email').value.trim() || '—'],
-        ['Preferred Contact Method', document.getElementById('contactMethod').value.trim() || '—'],
-        ['Additional Notes', document.getElementById('notes').value.trim() || '—']
+        ['Preferred Contact Method', document.getElementById('contactMethod').value.trim() || '—']
       ];
 
       summaryBox.innerHTML = items.map(([label, value]) => `
@@ -725,14 +1007,17 @@
       `).join('');
     }
 
-    function buildWhatsAppLink() {
+    function buildLeadMessage() {
       const scope = getScopeValues().join(', ') || 'N/A';
 
-      const msg = `New Bathroom Remodeling Lead
+      return `New Bathroom Remodeling Lead
+
 Project Type: ${singleChoiceState.projectType || 'N/A'}
 Scope of Work: ${scope}
 Materials: ${singleChoiceState.materials || 'N/A'}
+Measurements: ${getMeasurementSummary()}
 Project Details: ${singleChoiceState.projectDetails || 'N/A'}
+Project Description: ${document.getElementById('projectDescription').value.trim() || 'N/A'}
 Timeline: ${singleChoiceState.timeline || 'N/A'}
 City: ${document.getElementById('city').value.trim() || 'N/A'}
 ZIP Code: ${document.getElementById('zip').value.trim() || 'N/A'}
@@ -740,11 +1025,17 @@ On-Site Evaluation: ${singleChoiceState.visit || 'N/A'}
 Full Name: ${document.getElementById('fullName').value.trim() || 'N/A'}
 Phone Number: ${document.getElementById('phone').value.trim() || 'N/A'}
 Email Address: ${document.getElementById('email').value.trim() || 'N/A'}
-Preferred Contact Method: ${document.getElementById('contactMethod').value.trim() || 'N/A'}
-Additional Notes: ${document.getElementById('notes').value.trim() || 'N/A'}`;
+Preferred Contact Method: ${document.getElementById('contactMethod').value.trim() || 'N/A'}`;
+    }
 
-      document.getElementById('whatsAppBackup').href =
-        'https://wa.me/18135917560?text=' + encodeURIComponent(msg);
+    function buildBackupLinks() {
+      const msg = buildLeadMessage();
+      document.getElementById('whatsAppBackup').href = 'https://wa.me/18135917560?text=' + encodeURIComponent(msg);
+      document.getElementById('smsBackup').href = 'sms:18135917560?body=' + encodeURIComponent(msg);
+      document.getElementById('emailBackup').href =
+        'mailto:getestimatefast@gmail.com?subject=' +
+        encodeURIComponent('New Bathroom Remodeling Lead') +
+        '&body=' + encodeURIComponent(msg);
     }
 
     showStep(0);
